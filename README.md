@@ -2,19 +2,7 @@
 
 Этот проект демонстрирует процесс генерации данных, их репликации из одной базы данных в другую, а также построение аналитических витрин с использованием Apache Airflow и Docker.
 
-## Структура проекта
-data_replication_analytics/
-│
-├── Dockerfile
-├── docker-compose.yml
-├── generate_data.py
-├── dags/
-│   └── replication_dag.py
-│   └── analytics_dag.py
-├── README.md
-└── requirements.txt
-
-### Описание файлов и папок
+## Описание файлов и папок
 
 - **Dockerfile**: Файл конфигурации для сборки образа Docker.
 - **docker-compose.yml**: Конфигурационный файл для управления контейнерами Docker.
@@ -25,23 +13,24 @@ data_replication_analytics/
 - **README.md**: Файл с описанием проекта и инструкциями по его использованию.
 - **requirements.txt**: Список зависимостей Python, необходимых для проекта.
 
-## Инструкции по запуску проекта
+## Запуск
 1. **Клонируйте репозиторий:**
-
-   ```bash
-   git clone https://github.com/<your_username>/<repository_name>.git
-   cd <repository_name>
+   ```
+   git clone https://github.com/katrinnaya/data_replication_analytics.git
+   cd data_replication_analytics
+   ```
 2. **Запустите Docker Compose:**
-docker-compose up -d
+   ```
+   docker-compose up -d
+   ```
+    Это запустит все необходимые сервисы (PostgreSQL, MySQL, Airflow).
+
 3. Проверьте доступность сервисов:
 Откройте веб-браузер и перейдите по адресу http://localhost:8080 для доступа к веб-интерфейсу Airflow.
-4. Активируйте и запустите DAG:В веб-интерфейсе Airflow активируйте DAG-файлы replication_dag и analytics_dag. Они начнут выполнение задач по репликации данных и построению аналитических витрин.
-5. Просмотрите результаты:После успешного выполнения DAG проверьте наличие реплицированных данных в MySQL и аналитических витрин.
 
+5. Активируйте и запустите DAG:В веб-интерфейсе Airflow активируйте DAG-файлы replication_dag и analytics_dag. Они начнут выполнение задач по репликации данных и построению аналитических витрин.
 
-
-
-# Аналитические витрины
+## Аналитические витрины
 
 ## Витрина активности пользователей
 
