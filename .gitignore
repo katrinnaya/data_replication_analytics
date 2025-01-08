@@ -1,0 +1,13 @@
+# Игнорировать папку logs и её содержимое
+logs/
+
+# Игнорировать папку plugins и её содержимое
+plugins/
+
+# Остальные файлы будут включены в репозиторий
+!dags/
+!docker-compose.yml
+!Dockerfile
+!generate_data.py
+!README.md
+!requirements.txt
